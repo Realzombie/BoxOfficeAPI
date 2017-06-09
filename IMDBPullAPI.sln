@@ -12,6 +12,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "IMDBPullAPI", "src\IMDBPullAPI\IMDBPullAPI.xproj", "{5D099153-183E-430D-B790-E72CC17A05C4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "core", "core", "{B5D32FD6-1510-4776-B101-D14F4E35B8F3}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "IMDBPullAPI.Core", "src\IMDBPullAPI\core\IMDBPullAPI.Core\IMDBPullAPI.Core.xproj", "{073F10D6-37C9-4D35-99D6-EBFBA7C64359}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,11 +26,16 @@ Global
 		{5D099153-183E-430D-B790-E72CC17A05C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D099153-183E-430D-B790-E72CC17A05C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D099153-183E-430D-B790-E72CC17A05C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{073F10D6-37C9-4D35-99D6-EBFBA7C64359}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{073F10D6-37C9-4D35-99D6-EBFBA7C64359}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{073F10D6-37C9-4D35-99D6-EBFBA7C64359}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{073F10D6-37C9-4D35-99D6-EBFBA7C64359}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{5D099153-183E-430D-B790-E72CC17A05C4} = {19FDF6B5-6A26-403B-809B-D6B29B92F23B}
+		{073F10D6-37C9-4D35-99D6-EBFBA7C64359} = {B5D32FD6-1510-4776-B101-D14F4E35B8F3}
 	EndGlobalSection
 EndGlobal

@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using System.Net.Http;
+using System;
+using IMDBPullAPI.Core;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
 
 namespace IMDBPullAPI.Controllers
 {
@@ -10,21 +12,21 @@ namespace IMDBPullAPI.Controllers
     {
         public IActionResult Index()
         {
-            return View();
-        }
-
-        public IActionResult About()
-        {
-            ViewData["Message"] = "Your application description page.";
+            GetAPICall();
 
             return View();
         }
 
-        public IActionResult Contact()
+        public async void GetAPICall()
         {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
+            using (var client = new HttpClient())
+            {
+                var response = await client.GetAsync("http://www.imdb.com/xml/find?json=1&nr=1&tt=on&q=lost");
+                if(response.IsSuccessStatusCode)
+                {
+                    var doc = JsonConvert.DeserializeObject<TitleInformation>(response.Content.ReadAsStringAsync().Result);
+                }
+            }
         }
 
         public IActionResult Error()
